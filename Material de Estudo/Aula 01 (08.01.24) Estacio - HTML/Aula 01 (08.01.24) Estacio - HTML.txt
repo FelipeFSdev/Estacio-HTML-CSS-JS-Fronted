@@ -1,0 +1,259 @@
+- Linguagem de marcação de hypertexto:
+    Popularmente conhecida como "html" a linguagem de hypertexto é usada para
+    estruturação de documentos agrupando textos, vídeos, tabelas, etc.
+    Utilizando o conceito de hierarquia de elementos, é possível classificar
+    ou identificar um elemento "pai", "filho" e/ou "irmão", através das tags
+    de marcação "<>".
+
+- Importância da declaração de tipo de documento:
+    Ao longo dos anos, desde a criação do html, foram se criando novas versões
+    com novas implementações para a linguagem a partir das necessidades de
+    cada época.
+    Antes da criação do HTML5, era comum, na criação de páginas, definir o 
+    tipo de documento que estava sendo criado, para que o navegador "soubesse"
+    quais conjuntos de tags seriam utilizadas e renderizadas. 
+    Apesar de não ser, teoricamente, necessário o uso do <DOCTYPE> para 
+    criação de novas páginas, ainda existem muitas páginas antigas (criadas 
+    antes do HTML5) que não foram "portadas" para a nova versão.
+
+- Diferença de instrução <DOCTYPE> HTML4 -> HTML5:
+    O HTML4 previa três tipos de doctype: strict, transitional e frameset.
+        Strict: Obrigatoriedade de separação entre estrutura e apresentação;
+        limitação nos elementos de apresentação disponíveis; ausência de
+        suporte a tags obsoletas.
+        Transitional: Mais maleável em relação aos atributos de apresentação;
+        possibilidade de usar tags obsoletas.
+        Frameset: Tag obsoleta do HTML4 que permitia o agrupamento de vários
+        frames e exibição em uma única página.
+    Ainda baseada em uma SGML(Standard Generalized Markup Language), o HTML4 
+    exigia uma declaração extensa de tipo de documento. 
+    Ex: 
+        <!DOCTYPE html PUBLIC “-/W3C/DTD HTML 4.01 Transitional//EM” http://www.w3.org/TR/html4/loose.dtd>
+        É possível identificar:
+        Tipo de documento: HTML,
+        Tipo de acesso a DTD: PUBLIC,
+        Local de hospedagem da DTD: W3C/DTD,
+        Versão de HTML: HTML 4.01 Transitional,
+        URL da especificação: http://www.w3.org/TR/html4/loose.dtd
+    A partir da HTML5, quando a linguagem deixou de se basear em SGML, as
+    declarações passaram a ter uma sintaxe bem resumida.
+    Ex:
+        <!DOCTYPE html>
+        
+- Elementos essenciais para uma página web:
+    A estrutura essencial de uma página web é constituída por: 
+        Raiz,
+        Cabeçalho,
+        Corpo
+    Logo após a definição de tipo do documento, é declarada a tag raiz
+    "<html>" seguida por "<head>" e "<body>" respectivamente (sempre
+    lembrando de fazer seus devidos "fechamentos").
+
+- Raiz: 
+    Tag inicial após a declaração do <!DOCTYPE>, <html></html>. 
+    Dentro da raiz do documento, serão inseridas todas as outras tags e 
+    informações.
+
+- Cabeçalho:
+    Responsável pela manutenção de elementos da página, o cabeçalho mantém
+    todo o documento em ordem e funcionando, e para isso, existem algumas
+    tags que são comumente utilizadas dentro do "<head> </head>".
+    Ex: 
+        <title> Para definir o título do documento, mostrado na barra de 
+        navegação </title>
+        <meta> Informações da página como palavras-chave, descrição, tipo
+        de codificação, etc.</meta>
+        <script> Inclusão/definição de scripts </script>
+        <link> Normalmente responsável pela inclusão de folhas de estilo (CSS)
+        externas, e miniaturas para icone na barra de navegação </link>
+        <style> Responsável pelo vínculo de folhas de estilo (CSS) caso
+        declaradas diretamente no documento </style>
+
+- Corpo: 
+    O body de uma página é o "trecho" do código no qual será inserido todo o 
+    conteúdo a ser mostrado para o usuário final.
+    Responsável pela estruturação e apresentação do conteúdo.
+
+- Elementos comuns/básicos de páginas web:
+    Cabeçalho: área inicial onde é colocado um título, logomarca, etc.
+    Barra de navegação: área vertical e/ou horizontal contendo links p/ navegação
+    por seções na página.
+    Conteúdo: conteúdo geral da página.
+    Barra lateral: pode conter links ou informações adicionais sobre o conteúdo 
+    principal.
+    Rodapé: local onde é disposto links complementares e referências
+
+- Tags html:
+    Como falado anteriormente, em linguagens de marcação, mais especificamente html,
+    é feito o uso de tags (palavras reservadas escritas entre os sinais "<" e ">")
+    para a estruturação de um documento. 
+    Essas tags possuem palavras reservadas já pré-definidas, ou seja, não é possível 
+    a criação de tags próprias na escrita de um código. Outra observação importante é
+    a obrigatoriedade de fechamento dessas tags para identificação, pelo navegador, de
+    início e fim de uma tag (similar ao conceito de escopo em linguagens de programação).
+    Tags podem ser classificadas e divididas de acordo com suas funções: estruturais,
+    textuais e semânticas.
+        Textuais: Armazenam contéudo da página (textos, mídia). Ex: <h1>, <p>, <img>.
+        Semântica: Organizam a estruturação do contéudo.
+    
+    Além disso, vale ressaltar que elas também podem possuir 
+    atributos.
+
+- Atributos: 
+    Permitem que sejam adicionados características a uma tag, compostos por nome e valor.
+    Ex:
+        <img src="image.png" alt="image"/>
+    Repare que no exemplo acima é realizado o fechamento da tag na mesma "casa" em que a
+    declaramos. No exemplo, "src" refere-se ao caminho de hospedagem da imagem e "alt" a
+    mensagem que deverá ser exibida em caso de não ser possível encontrar e/ou mostrar a 
+    imagem.
+    Dois atributos que possuem extrema importância para o desenvolvimento web são:
+        id: Utilizado pra definir identificador único paga uma tag
+        class: Utilizado para definir uma classe a qual uma ou mais tags devem pertencer,
+        tornando possível a referenciação de todas as tags de forma simplificada.
+
+- Exemplos de tags comumente utilizadas:
+    <article>: Inserir bloco de contéudo para inserir um artigo como post de twitter
+    <section>: Definir uma seção dentro do documento. Uma seção pode conter várias tags.
+    <h1, h2...>: Inserir e destacar títulos e subtitulos de acordo com sua necessidade.
+    <p>: Inserir paragráfo.
+    <pre>: Inserir texto pré-formatado.
+    <div>: Usada pra agrupar conteúdo sem semântica específica.
+    <span>: Semelhante a div, porém, não quebra o conteúdo, apenas agrupa.
+    <a>: Inserir links.
+    <br/>: Quebra de linhas.
+    <hr>: Insere uma linha horizontal no documento. Usada normalmente para separar conteúdo.
+    <b>: Aplica efeito negrito no texto.
+    <strong>: Aplica efeito negrito e marca como importante.
+    <i>: Aplica efeito itálico no texto.
+    <em>: Aplica efeito itálico e da ênfase no texto.
+    obs: Tanto <b> e <strong> quanto <i> e <em> produzem os mesmos efeitos visuais (deixar
+    em negrito e itálico, respectivamente), porém, em dispositivos de leitura oral de telas
+    ao encontrarem as tags <strong> e <em>, é feito uma modulação de voz para dar ênfase ao 
+    texto.
+
+- Tags complementares:
+    Foi mostrado, anteriormente, que existem 3 principais tipos de tags html pra estruturação.
+    As tags semânticas, textuais e estruturais, cada uma com suas próprias características
+    e objetivos finais. Porém, existem algumas tags ditas "complementares", como as tags de 
+    lista, tabelas e mídia, as quais permitem a "apresentação" de dados mais limpa e agradável.
+    Ex:
+        Listas: Existem 3 tipos de listas suportadas pelo HTML, dentre elas, as listas ordenadas,
+        não-ordenadas e de definição.
+            <ol>    Ordenadas: Listagem de dados em ordem númerica ou alfabética.
+            <ul>    Não-ordenadas: Listagem de dados sem ordem específica.
+            <dl>    De definição: Listagem de dados com atribuição de descrição para cada item.
+        As listas seguem o modelo de hierarquia, logo, possuem tags específicas para
+        identificar seus "filhos".
+            Filhos de listas ordenadas: <li>
+            Filhos de listas não-ordenadas: <li>
+            Filhos de listas de definição: <dt>
+            Descrição para listas de definição: <dd>
+        Tabelas: Também seguindo o modelo de hierarquia, as tabelas possuem tags "pai", 
+        que definem o contêiner geral, e as tags "filhas" para alterar aspectos específicos
+        das tabelas.
+            <table> Container principal (normalmente acompanhada de width e border)
+            <tr> Linhas da tabela
+            <td> Colunas *obs: Deve ser utilizada dentro de uma tag de linha
+            <th> Título de uma coluna *obs: Deve ser utilizada dentro de uma tag de linha
+            <thead> Cabeçalho da tabela
+            <tfoot> Rodapé da tabela
+        Por padrão, as linhas e colunas possuem mesmo espaçamento, porém é possível, se
+        necessário a mesclagem de duas ou mais colunas ou linhas com o uso do:
+            rowspan: Mesclagem de linhas. Ex: <tr> <th rowspan="2"> texto </th> </tr>
+            colspan: Mesclagem de colunas. Ex: <tr> <th colspan="2"> texto </th> </tr>
+        obs: Para que a tabela seja mostrada corretamente pelo navegador ao renderizar
+        a página, é importante a configuração de largura da tabela e tamanho das bordas.
+
+- Mídia aúdio e vídeo:
+    Como falado anteriormente, a linguagem de marcação de hypertexto possui suporte
+    para imagens, vídeos e aúdios que são cada vez mais aprimoradas ao decorrer do 
+    tempo e advento de novas versões.
+    Com o surgimento do HTML5, a implementação desses vídeos ficaram ainda mais simples,
+    sendo necessário apenas o uso das tags <video> e/ou <audio>, seguido, obviamente, 
+    do caminho em que está hospedado a imagem, vídeo ou aúdio desejado.
+    E assim como todos os tópicos abordados até o momento, os recursos de aúdio e 
+    vídeo também possuem tags, ou melhor, propriedades, específicas como: Loop,
+    autoplay e controls.
+
+- Formulários: 
+    Quando fala-se sobre formulário é comum imaginar um documento no google docs
+    cheios de perguntas e campos para preencher. Em HTML não é bem assim.
+    Formulários HTML são a base para a interação entre a página web e o usuário. É
+    comum, por exemplo, ao acessar um site para solicitar algum serviço, ser pedido
+    um cadastro de email ou alguma informação adicional. Todos esses campos são
+    essencialmente formulários html.
+    Formulários são compostos por uma tag (container) principal e várias tags filhas
+    com funções específicas.
+    Ex:
+        <form> Container principal
+        <input> Seguido do atributo "type", indica que tipo de dado deve ser inserido.
+        <textarea> Campo de texto com múltiplas linhas
+        <select> Cria um container com campos/opções a serem selecionados
+        <options> Tag que precede <select>, define as opções a serem selecionadas.
+        <button> Cria um botão para executar uma ação (enviar form, limpar dados, etc).
+        <label> Cria uma legenda para indicar a função de cada campo do formulário.
+        <fieldset> Cria seções no formulário, facilitando a separação e visualização.
+        <legend> Usando em conjunto com fieldset para dar uma descrição a cada seção.
+    Vale ressaltar que para cada tag existe um (ou mais) atributos essenciais para o
+    seu melhor aproveitamento/desempenho.
+    Ex: 
+        <form>: action - Define o endereço para onde o formulário será enviado.
+        <form>: method - Define o método HTTP para o envio dos dados.
+        <label>: for - Vincula a label ao campo a que ela se refere.
+        <input>: min/maxlength - Define quantidade minima ou maxima de caracteres.
+        <button>: type - Tipo de campo e comportamento (pode ser usado com input).
+        <option>: value - Define previamente o valor da tag (pode ser usado com input).
+
+- Atributo type:
+    O atributo type, como mencionado acima, indica qual tipo de dado será usado em 
+    determinada seção do site, e também o comportamento do campo a depender da tag
+    a que está associado.
+    Alguns tipos mais comuns são:
+        text = valor padrão ao ser utilizado com <input>
+        password = "esconde" o texto com *
+        hidden = o texto não é mostrado no navegador
+        checkbox = seleção de valores através de click/check
+        radio = seleção de valor único atráves de click/check
+        submit = associada a tag <button> faz envio do formulário
+        reset = associada a tag <button> limpa os dados do formulário
+        button = associada a tag <input> exerce função de <button>
+
+- Novos atributos e tipos: 
+    Com o passar do tempo e evolução das coisas, é comum o surgimento de novas
+    necessidades. Com HTML não é diferente, e para suprir essas necessidades foram
+    criadas alguns atributos e tipos com funções bem específicas.
+    Ex: Atributos - 
+        placeholder: Exibe um texto ao usuário acima do campo input indicando o 
+        tipo de texto a ser inserido.
+        required: Torna um campo obrigatório. Utilziado na validação de formulário.
+        autofocus: Determina que um campo específico seja focado ao carregar um 
+        formulário.
+        pattern: Valida um campo de acordo com uma RegEx (Expressão regular).
+    Ex: Tipos - 
+        tel: Tipo específico para inserção de números de telefone.
+        datetime: Específico para inserção de data com fuso-horário UTC.
+        date: Específico para insersão de data sem fuso-horário.
+        number: Específico para inserção de números.
+
+- Validação de formulários: 
+    Diferente do que pode-se imaginar, não é preciso uso de nenhuma linguagem de 
+    programação para realizar a validação de dados, é possível fazer essas
+    verificações com HTML puro/nativo.Todavia, as validações do html não são 
+    completas, então se for necessário uma validação mais complexa, será necessário
+    o uso de PLs.
+    Existem duas verificações possíveis de se fazer com HTML5:
+        1: Verificar se os dados inseridos seguem o padrão definido pelo pattern;
+        2: Verificar se um campo obrigatório foi preenchido.
+
+- Expressões regulares:
+    Este será um tópico breve para exemplificar o uso do pattern. 
+    Citado anteriormente, o pattern prevê o uso de expressões regulares (ou regex),
+    que podem ser entendidas como "modelo padrão que uma cadeia de caracteres deve
+    seguir".
+    Para validação de um número de telefone inserido no campo input, por exemplo,
+    o modelo padrão (pattern) seguiria o seguinte modelo:
+        pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{3-4}$"
+    Traduzindo esse código, tem-se que o modelo de entrada terá 2 números de 0 a 9
+    dentro dos parênteses, seguido de 5 números de 0 a 9, antes do hífen, e 3 a 4
+    números de 0 a 9 depois do hífen.
