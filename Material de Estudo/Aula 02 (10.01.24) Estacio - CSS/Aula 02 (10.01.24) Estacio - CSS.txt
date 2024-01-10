@@ -84,3 +84,40 @@
         text-...: Controla comportamento de um texto (alinhamento, aparência, etc).
         width: Controla a largura de um elemento.
         z-index: Controla a profundidade de um elemento (útil para sobreposição).
+
+- Integração do CSS ao HTML:
+    Tendo em mente todas as características essênciais para uso da linguagem de
+    estilo, chegou a hora de fazer a implementação dentro de um documento html.
+    Existem diferentes formas, algumas mais indicadas, outras menos, mas todas
+    "usaveis". São elas: "inline", "interna", "externa", "em escopo".
+        CSS INLINE: Declara o estilo diretamente na tag html
+            Ex: 
+                <p style="background-color:red"> Texto </p>
+        CSS INTERNA: Declara estilo no <head> do documento
+            Ex:
+                <head>
+                <style="text/css">
+                p{
+                    background-color:red;
+                }
+                </style>
+                </head>
+        CSS EXTERNA: Declara estilo em um arquivo separado ".css"
+            Ex:
+                <head>
+                <link rel="stylesheet" type="text/css" href="arquivo.css"/>
+                </head>
+        CSS EM ESCOPO: O estilo será aplicado apenas na seção declarada.
+            Ex:
+                <div>
+                    <style="text/css">
+                    p{
+                        background-color: red;
+                    }
+                    </style>
+                </div>
+    obs: Retomando o conceito de herança, o CSS permite dinamicamente
+    que elementos filhos herdem estilos de seus pais, caracterizando
+    o "efeito cascata". Contudo, vale lembrar, que prevalece o estilo
+    com maior especificidade, logo, estilos internos e de escopo tem
+    preferência sobre os estilos externos.
