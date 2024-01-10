@@ -121,3 +121,67 @@
     o "efeito cascata". Contudo, vale lembrar, que prevalece o estilo
     com maior especificidade, logo, estilos internos e de escopo tem
     preferência sobre os estilos externos.
+
+- Cores:
+    Falando sobre cores a fim de estilizar elementos, é possível fazer a
+    declaração de três formas:
+        Palavras-chave: Nesse caso é possível utilziar o nome (em inglês)
+        das cores desejadas ou o seu código hexadecimal (#FFFFFF).
+        Coordenada cúbica RGB: Com notações rgb() e/ou rgba().
+        Coordenada cilindrica HSL: Com notações hsl() e/ou hsla().
+    Sendo o uso de palavras-chave com seu código hexadecimal o mais
+    comum dentre elas.
+
+- Texto:
+    Aprofundando um pouco sobre estilização de textos, pode-se dizer que
+    o uso do css em textos se divide em duas partes:
+        Layout do texto: Espaçamento, alinhamento, etc.
+        Fonte do texto: Familia, tamanho, etc.
+    Sobre alinhamento, existem 4 valores possiveis:
+        Right, Left, Center, Justify
+    Para alinhamento a direita, esquerda, centro ou justificada, respectivamente.
+    Já para o espaçamento tem-se:
+        Normal: valor padrão do navegador (entre 1 e 1.2 a partir do tamanho).
+        Número: valor inteiro/decimal que será multiplicado ao tamanho da fonte.
+        Comprimento: valor em "pixels", "pontos", "em", etc
+    As opções de estilo de fonte são um pouco mais simples, indo da familia
+    (arial, calibri, etc) até seu peso e efeitos visuais (negrito, italico, etc).
+        font-family: é possível definir uma ou mais familias de fonte para 
+        serem renderizadas pelo navegador, seguindo a prioridade da esquerda
+        para direita.
+        font-size: define o tamanho do texto, utilizando a unidade de medida
+        "px" (abreviação de pixels) normalmente.
+        font-style: define o efeito visual do texto, variando entre "italic",
+        "normal" e "oblique".
+        font-weight: responsável por aplicar o efeito efeito negrito ao texto,
+        variando entre "normal", "bold", "lighter" e "bolder".
+    obs: Além das fontes padrão dos sistemas operacionais, é possível também
+    fazer a utilização de "web-fontes" (fontes disponíveis na web que são
+    baixadas pelo navegador no momento de abertura da página). Para isso, é
+    utilizado o recurso "@font-face", configurando apenas seu peso, familia,
+    estilo e local em que está hospedada a fonte.
+        Ex:
+            @font-face{
+                font-family:
+                font-style:
+                font-weight:
+                src: local("nomeDaFonte"),
+                    url("siteDeHospedagem") format ()
+            }
+        Note que neste código é utilizado as funções local() e format(), tais
+        funções tem objetivo de indicar ao navegador que deve ser feita uma 
+        busca no computador pela fonte específicada, e indicar o formato de 
+        cada fonte específica, no caso da declaração de várias fontes
+        simultaneamente.
+
+- Abreviações e atalhos:
+    Folhas de estilo, como vistas ao longo desta aula, possuem escrita bem
+    extensa, às vezes, dificultando sua leitura. Para contornar esta situação
+    o CSS permite a abreviação na declaração de estilos.
+    Ex:
+        p{                                      p{
+            margin-top: 10px;                       margin: 10px 6px 8px 4px;
+            margin-bottom: 8px;                 }
+            margin-right: 6px;
+            margin-left: 4px;
+        }
