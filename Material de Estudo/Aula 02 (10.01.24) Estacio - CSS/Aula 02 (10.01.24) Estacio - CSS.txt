@@ -1,0 +1,86 @@
+- Linguagem de marcação e estilos: 
+    Diferentemente do conteúdo visto anteriormente a respeito da estruturação
+    de páginas web, as linguagens de estilo não possuem função semântica para
+    organização/estruturação de documentos.
+    Também chamadas de Folhas de Estilo em Cascata (Cascading Style Sheets) ou
+    simplesmente, CSS, as linguagens de estilo fornecem controle completo a 
+    cerca da apresentação do conteúdo, permitindo a alteração de formas, cores,
+    posição de elementos e muito mais.
+    A respeito da sintaxe da linguagem, é necessário informar o elemento 
+    específico o qual será alterado, quais propriedades deve ser alterada e o
+    valor que será atribuido a essas propriedades.
+    Ex: 
+        p{
+            background-color:blue;
+            color:white;
+        }
+    Temos, neste exemplo, a tag "<p>" exercendo a função de "seletor", no caso,
+    o elemento que será alterado; dentro das chaves a propriedade a ser alterada,
+    "background-color" e logo após o valor a ser atribuido a respectiva propriedade
+    "blue". Traduzindo: A cor de fundo do paragráfo deve ser azul e fonte branca.
+    obs: De forma parecida com objetos javascript, a sintaxe do CSS é feita
+    dentro de chaves, com seus valores após ":" e separada por ";"
+
+- Seletores Class e Id:
+    No último exemplo foi mostrado, como aplicar estilo diretamente à uma tag html,
+    porém existe outras formas de realizar essa aplicação, através das classes e 
+    identificadores.
+    No módulo sobre HTML foi apresentado o atributo "class" e "id", sendo representados
+    por "." e "#", respectivamente.
+    Ex: *no documento html
+        <h1 class="texto_verm"> Título </h1>
+        <p id="texto_apresent"> Paragráfo </p>
+
+        *no documento css
+        <style type="text/css">
+        #texto_apresent{                    .texto_verm{
+            font-size: 16px;                    color: red;
+        }                                   }
+        </style>
+
+    Uma observação interessante quanto ao uso de id e class, é que não existe uma 
+    regra padrão para utilização de um ou outro, mas é importante lembrar que um id
+    é atribuído a apenas um elemento enquanto uma class pode ser atribuida a vários,
+    manter esse comportamento pode evitar problemas de estilização.
+
+- Seletores de tributo:
+    Bastante flexíveis, é possível realizar uma gama enorme de combinações, como
+    selecionar todos elementos que possuem atributo "title" contendo algum valor
+    específico, selecionar todos elementos com atributo "checked", elementos com
+    tipo "text", etc.
+    Ex:
+        [checked]{
+            color: blue
+        }
+    Note que os seletores de atributos são declarados dentro de colchetes[] sendo
+    possível combinações com valores.
+
+- Seletores baseados em relacionamento:
+    Voltando um pouco ao modelo de hierárquia, em css também é possível selecionar
+    apenas elementos "filhos", irmãos, etc.
+    Ex: 
+        H1P: Seleciona elementos P descendentes (filho, neto, etc) de um elemento H1
+        H1 > P: Seleciona elementos P filhos de um elemento H1
+        H1 + P: Seleciona elementos P que sejam irmãos (e filhos do mesmo pai) de
+        um elemento H1.
+
+- Propriedades:
+    Existem inúmeras propriedades capazes de serem alteradas, até mesmo propriedades
+    exclusivas de cada navegador, chamadas de proprietárias. Em desenvolvimento é
+    mais comum priorizar uma alta compatibilidades com o maior número possível de 
+    navegadores, e por isso, é importante dar preferência às propriedades padrão.
+    Ex:
+        background: Controla fundo de elementos
+        border: Controla bordas de elementos
+        top, bottom, right, left: Controla posicionamento de elementos
+        color: Controla cor do texto de elementos
+        font: Controla tipo de fonte, tamanho, espessura, etc. A depender do 
+        comando (font-size, font-family, etc).
+        height: Controla altura de elementos.
+        list: Controla a estilização de listas. list-style, list-style-image, etc.
+        margin: Controla a distância de um elemento a outro a partir da margem.
+        padding: Controla a distância entre as bordas de um elemento e outro.
+        position: Controla como um elemento deve ser posicionado na página.
+        text-...: Controla comportamento de um texto (alinhamento, aparência, etc).
+        width: Controla a largura de um elemento.
+        z-index: Controla a profundidade de um elemento (útil para sobreposição).
