@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Exemplo CSS boxes </title>
+    <style type="text/css">
+        #box_inicial {
+            width: 400px;
+            height: 200px;
+            color: white;
+            background-color: coral;
+        }
+
+        #box_meio {
+            width: 400px;
+            height: 200px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-left: 50px;
+            margin-right: 50px;
+            background-color: beige;
+        }
+
+        #box_final {
+            width: 400px;
+            height: 200px;
+            border: 10px solid black;
+            padding-top: 50px;
+            padding-left: 50px;
+            padding-bottom: 50px;
+            padding-right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Exemplos de boxes e estilização CSS </h1>
+    <div id="box_inicial">
+        Content/conteúdo do box inicial.
+        Neste box inicial é definido sua altura, largura
+        cor de fundo e cor do texto (conteúdo). Note o
+        espaçamento padrão da box para os limites da página.
+    </div>
+    <div id="box_meio">
+        Content/conteúdo do box do meio.
+        Agora nessa box central, é alterado as propriedades
+        de margem, ou seja, a distância entre uma box e outra.
+        Além da margem/distância entre os limites da página e
+        e própria box.
+    </div>
+    <div id="box_final">
+        Content/conteúdo do box final.
+        Percebe-se que essa box final tem tamanho maior que as demais
+        isso deve-se as medidas de "padding". Estas são somadas às
+        medidas de altura (height) e largura (width).
+    </div>
+</body>
+
+</html>

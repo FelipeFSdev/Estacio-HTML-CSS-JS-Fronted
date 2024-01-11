@@ -185,3 +185,19 @@
             margin-right: 6px;
             margin-left: 4px;
         }
+
+- Modelo de "boxes":
+    O conceito de boxes é uma forma interessante para o aprendizado de
+    montagem de páginas. É possível fazer um paralelo com brinquedos
+    de montar. Com Lego, por exemplo, é disposto uma grande variedade
+    de blocos com diferentes tamanhos e cores, e o objetivo final é 
+    juntar todos eles para criar uma "forma harmoniosa", igualmente
+    a estruturação de uma página html/css.
+    Para que seja possível a organização desses blocos é importante
+    entender as características únicas de cada bloco assim como os
+    estilos que podem receber.
+    Características:
+        margin: margem/espaçamento entre um box e outro
+        border: borda
+        padding: preenchimento de espaço entre o conteúdo e a borda
+        content: conteúdo
