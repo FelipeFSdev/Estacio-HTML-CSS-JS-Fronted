@@ -1,0 +1,124 @@
+- Pseudoclasses:
+    Conceito de definição de "estado especial" para um elemento CSS.
+    Um exemplo prático e bem simples para entender melhor o que são
+    estados especiais é o evento "mouseover". Quando é passado o mouse
+    em cima de determinado elemento, as propriedades dele são alteradas,
+    modificando cor, tamanho, etc. Este evento ocorre pela presença 
+    das pseudoclasses no código, alterando momentaneamente suas 
+    características e caracterizando o "estado especial", citado acima.
+    Ex:
+        :active
+        :checked
+        :first-child
+        :last-child
+        :hover
+    Acima alguns exemplos de pseudoclasses e suas funções.
+    Abaixo exemplos para declaração dessas pseudoclasses.
+        a:active            - Seleciona todos links ativos
+        input:checked       - Seleciona campos input checados
+        li:first-child      - Seleciona os primeiros itens de listas
+        li:last-child       - Seleciona os últimos itens de listas
+        div:hover           - Seleciona as divs no evento mouseover
+    A sintaxe de declaração é composta pela tag a que será vinculada
+    a pseudoclasse, seguida de ":" e o nome da pseudoclasse desejada.
+
+- Pseudoelementos:
+    Diferentemente das pseudoclasses, os pseudoelementos são palavras
+    -chave para modificar apenas um trecho específico, em caso de 
+    modificar apenas uma letra no ínicio de um texto, por exemplo.
+    Ex:
+        ::after
+        ::before
+        ::first::letter
+        ::first-line
+        ::selection
+    A sintaxe de declaração de pseudoelementos é bem parecida com a 
+    das pseudoclasses, composta pela tag e seguida por "::".
+        img::after          - Insere conteúdo após elemento
+        h1::before          - Insere conteúdo antes do elemento
+        p::first::letter    - Seleciona primeira letra do elemento
+        p::first-line       - Seleciona primeira linha do elemento
+        p::selection        - Seleciona os elementos selecionados pelo usuario
+
+- Layout de colunas/grid layout: 
+    Como visto anteriormente, páginas web são estruturadas a partir
+    de boxes (ou blocos) de conteúdo porém, apenas escrever blocos 
+    ocasionam no empilhamento de boxes sem aproveitamento real das
+    áreas da página do navegador. 
+    Para fazer a devida distribuição de boxes e montar uma página
+    harmônica, é utilizado as propriedades de posição do CSS.
+    Ex:
+        position static: Não assumem posição especial, seguindo
+        o fluxo natural da página. Propriedades top, right, etc
+        não possuem efeito em posições estáticas.
+        position relative: Assumem posição relativa (de acordo
+        com propriedades top, right, etc) a partir da sua posição
+        "normal".
+        position fixed: Assume uma posição fixa na página. Ou
+        seja, independente do "scroll" da página, o elemento
+        permanecerá no mesmo local.
+        position absolute: Assume posição relativa ao ancestral
+        mais próximo ou ao body, caso seja o primeiro elemento
+        da página.
+        position sticky: Assume posição fixa em relação ao 
+        scroll da página, sendo útil para efeitos de sobreposição. 
+
+- Frameworks:
+    União de códigos comuns entre diferentes projetos que disponibilizam
+    soluções genéricas para desenvolvimento de aplicações.
+    Um exemplo de framework bastante comum é o React. Ao fazer
+    instalação da biblioteca e iniciar um projeto com react, é
+    possível identificar diferentes arquivos html, css, js, entre
+    outros. Isso por que os frameworks já são carregados com 
+    todas as ferramentas essenciais para criação de um novo
+    projeto.
+
+- CSS Bootstrap:
+    Criado pelo twitter e mantido, atualmente, de forma independente
+    o bootstrap é um framework de estilo opensource.
+    Segue a premissa de "mobile-first". Primeiro tornar o
+    layout "harmonico" para um dispositivo mobile, para assim
+    desenvolver o layout para desktops.
+    Layout fundamentado pelo sistema de "grids", com ênfase de linhas,
+    colunas e containers.
+    Grid do bootstrap é composto por 12 colunas e 5 breakpoints (em
+    quais pontos o layout deve ser ajustado pra se adequar a resolução
+    da tela).
+    Ex:
+        extra small: menor que 576px
+        small: entre 576px e 767px
+        medium: entre 766px e 991px
+        large: entre 992px e 1199px
+        extra large: maior/igual que 1200px
+    Cada breakpoint conta com um prefixo específico de classe:
+    ".col", ".col-sm-", ".col-md-", ".col-lg-", ".col-xl-",
+    respectivamente.
+    Para o seu uso basta a importação de um arquivo CSS e um Javascript
+    diretamente no documento html, ou usando gerenciadores de pacote 
+    como "npm". Este último sendo necessário a instalação também do 
+    "Jquery" e "Popper"
+
+- CSS Foundation:
+    Também dando prioridade a dispositivos mobiles, este framework
+    segue o sistema de grids, sendo composto por 12 colunas (assim 
+    como o bootstrap).
+    Framework responsivo no qual sua principal característica é o 
+    uso de pré-processadores css, chamado SASS.
+    Seu uso, assim como bootstrap, pode ser feito a partir de importação
+    direta no arquivo html, ou através do npm (recomendado o uso de 
+    Jquery).
+
+- CSS Semantic UI:
+    O "caçula" dentre os 3 abordados, o Semantic UI também faz a 
+    utilização de pré-processadores, este porém utilizando LESS.
+    O destaque desse framework se dá pela sua sintaxe, utilizando
+    uma linguagem natural como substantivos, tornando o seu uso
+    mais intuitivo.
+    Sua instalação segue o mesmo padrão dos seus "irmãos", através
+    da importação ou gerenciador de pacotes juntamente a biblioteca
+    jquery.
+
+- Jquery:
+    Biblioteca opensource javascript que "facilita" a comunicação 
+    de páginas html com funções javascript e frameworks css,
+    garantindo maior flexibilidade ao lidar com eventos, animações, etc.

@@ -95,7 +95,6 @@
     textuais e semânticas.
         Textuais: Armazenam contéudo da página (textos, mídia). Ex: <h1>, <p>, <img>.
         Semântica: Organizam a estruturação do contéudo.
-    
     Além disso, vale ressaltar que elas também podem possuir 
     atributos.
 
