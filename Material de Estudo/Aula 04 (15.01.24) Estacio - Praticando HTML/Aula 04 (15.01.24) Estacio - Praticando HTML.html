@@ -19,9 +19,16 @@
     </div>
     <div>
         <h3>
-            <u>Top repositories</u> <button><i> New </i> </button>
+            <u>Top repositories</u>
+            <button style="
+            border-radius: 5px;
+            background-color: rgb(11, 230, 22);">
+                New
+            </button>
         </h3>
-        <input type="text" />
+        <form>
+            <input type="text" /> <button type="submit"> Search </button>
+        </form>
         <ul>
             <li>
                 <a href="https://github.com/FelipeFSdev/DIO-TypeScript-Fullstack" title="Typescript repository"
@@ -42,23 +49,48 @@
     </div>
     <div>
         <h2> Home </h2>
+        <hr />
         <blockquote>
+            <div>
+                <div>
+                    <h3> Start writing code</h3>
+                    <h4> Start a new repository for FelipeFSdev</h4>
+                    <p> A repository contains all of your project's files, revision history, and collaborator discussion
+                    </p>
+                    <label><strong> Repository name </strong> </label> <br>
+                    <input type="text" />
+                    <input type="radio" name="repoPrivacy" /> <b>Public </b>
+                    <input type="radio" name="repoPrivacy" /> <b>Private </b>
+                    <br>
+                    <a href="https://github.com/new">
+                        <button style="
+                            border-radius: 5px;
+                            background-color: rgb(11, 230, 22);
+                            margin-top: 3px;">
+                            Create a new repository
+                        </button>
+                    </a>
+                    <hr />
+                </div>
+            </div>
             <h3> Get started on <mark> GitHub </mark></h3>
             <img src="https://github.githubassets.com/assets/video-thumbnail-22873af1c902.jpg" alt="Video thumb" />
             <h4> Follow this exercise to try the GitHub flow </h4>
             <p>
-                <a href="https://docs.github.com/pt/get-started/quickstart/hello-world">
+                <a href="https://docs.github.com/pt/get-started/quickstart/hello-world" target="_self">
                     <button> Try the GitHub flow </button>
                 </a>
             </p>
+            <hr />
             <h3> Use tools of the trade </h3>
             <h4> Simplify your development workflow with a GUI</h4>
             <p> <strong> Install GitHub desktop </strong> to visualize, commit, and push changes
                 without ever touching the command line
             </p>
+            <hr />
             <div>
                 <h4> gitUser </h4>
-                <p> Extended paragraph about feature-ric ORM for nodejs and typescript </p>
+                <p> <i>Extended paragraph about feature-ric ORM for nodejs and typescript</i> </p>
                 <h6> Proramming laguage used. 12.2k Followers </h6>
             </div>
         </blockquote>
