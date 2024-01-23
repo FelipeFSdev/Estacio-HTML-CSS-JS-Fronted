@@ -1,0 +1,123 @@
+html,
+body {
+    font-family: "roboto", sans-serif;
+    background-color: aliceblue;
+}
+
+nav {
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 1.5rem;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #32b0b9;
+}
+
+nav ul li a:hover {
+    border-left: 2px solid rgb(188, 91, 226);
+    border-right: 2px solid rgb(188, 91, 226);
+}
+
+.banner {
+    background: url(https://4297949128.cbaul-cdnwnd.com/82faf782079840e8395524ad446f9f9c/200000003-0395003953/banner-sobre.jpg?ph=4297949128) 27% no-repeat;
+    min-height: 350px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    border-radius: 15px;
+}
+
+.banner .inner-banner {
+    background-color: #daecf5;
+    padding: 5rem;
+    border-radius: 40px;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.banner .inner-banner h1 {
+    font-size: 2rem;
+    color: #32b0b9;
+}
+
+.description_banner {
+    background: url(https://clinicatakeshi.com.br/wp-content/uploads/2020/09/cmi_clinica_medica_integrada_banner_home_1_olhar_clinico_marketing_medico-min-1500x630-1.jpg) 27% no-repeat;
+    min-height: 350px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    border-radius: 15px;
+}
+
+.description_banner .inner-banner {
+    background-color: #daecf5;
+    padding: 2rem;
+    border-radius: 40px;
+    opacity: 0.6;
+    text-align: center;
+    width: 45%;
+    margin-right: 700px;
+}
+
+#description {
+    margin: 3rem;
+}
+
+#description h3 {
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #32b0b9;
+    margin: 2rem;
+}
+
+#description h4 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+}
+
+#footer {
+    margin: 3rem;
+    display: flex;
+    background-color: #daecf5;
+    align-items: center;
+}
+
+.footer_info {
+    font-weight: 400;
+    padding-left: 5%;
+}
+
+.footer_info h3 {
+    margin: 2rem;
+    font-size: 30px;
+}
+
+.footer_info h4 {
+    margin: 2rem;
+    font-size: 18px;
+}
+
+.footer_info h5 {
+    margin: 2rem;
+    font-size: 15px;
+}
+
+.footer_info h6 {
+    text-align: end;
+}
