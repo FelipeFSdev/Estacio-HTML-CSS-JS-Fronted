@@ -65,14 +65,14 @@ nav ul li a:hover {
     background-color: #daecf5;
     padding: 2rem;
     border-radius: 40px;
-    opacity: 0.6;
+    opacity: 0.8;
     text-align: center;
     width: 45%;
     margin-right: 700px;
 }
 
 #description {
-    margin: 3rem;
+    margin: 2rem;
 }
 
 #description h3 {
@@ -92,9 +92,9 @@ nav ul li a:hover {
 }
 
 #footer {
-    margin: 3rem;
+    margin: 2rem;
     display: flex;
-    background-color: #daecf5;
+    background-color: aliceblue;
     align-items: center;
 }
 
@@ -120,4 +120,43 @@ nav ul li a:hover {
 
 .footer_info h6 {
     text-align: end;
+}
+
+.about_banner {
+    background: url(https://portalhospitaisbrasil.com.br/wp-content/uploads/2021/12/Clinica-HAS.jpg) 27% no-repeat;
+    min-height: 400px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+#about_clinic {
+    min-height: 350px;
+    text-align: justify;
+}
+
+#about_clinic h1 {
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    background-color: #32b0b9;
+    border-radius: 15px;
+    margin: 15px 750px 15px 750px
+}
+
+#about_clinic h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.clinic_card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight: 600;
+    margin: 0px 20px 15px 20px;
 }
