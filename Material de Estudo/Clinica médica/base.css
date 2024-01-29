@@ -126,7 +126,6 @@ nav ul li a:hover {
     background: url(https://portalhospitaisbrasil.com.br/wp-content/uploads/2021/12/Clinica-HAS.jpg) 27% no-repeat;
     min-height: 400px;
     background-size: cover;
-    display: flex;
     border-radius: 15px;
 }
 
@@ -163,7 +162,7 @@ nav ul li a:hover {
     background: url(https://grupoprosaude.com.br/wp-content/uploads/2020/04/banners-com-texto-1-1920x679.png) 27% no-repeat;
     min-height: 400px;
     background-size: cover;
-    display: flex;
+
     border-radius: 15px;
 }
 
@@ -225,4 +224,56 @@ table {
     border-collapse: collapse;
     font-size: 2rem;
     margin-left: 275px;
+}
+
+#contact_banner {
+    background: url(https://static.vecteezy.com/ti/vetor-gratis/p1/5263636-contate-nos-conceito-icones-como-telefone-movel-endereco-e-mail-chat-comunicacao-global-em-fundo-azul-escuro-para-apresentacao-banner-web-artigo-negocio-e-rede-conexao-e-empresa-vetor.jpg) 27% no-repeat;
+    min-height: 500px;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.contact_info {
+    margin-top: 15px;
+    display: flex;
+    background-color: #32b0b9;
+    border-radius: 15px;
+    text-align: justify;
+}
+
+.contact_info iframe {
+    border-radius: 25px;
+    margin: 15px;
+}
+
+#contact_form {
+    background-color: #daecf5;
+    margin: 15px 0px 15px 15px;
+    border-radius: 5px;
+    padding: 0px 15px 0px 55px;
+    width: 33%;
+}
+
+#contact_form input {
+    margin: 13px;
+    width: 455px;
+    height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact_form textarea {
+    max-height: 90px;
+    min-height: 90px;
+    min-width: 400px;
+    max-width: 450px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+#contact_form button {
+    color: white;
+    background-color: #32b0b9;
+    border-radius: 5px;
+    width: 85px;
+    height: 35px;
 }
