@@ -1,0 +1,69 @@
+- Semântica:
+    Disciplina linguística que se ocupa da significação das palavras
+    e expressões bem como das relações de sentido que estabelecem
+    entre si.
+    Em resumo, ao desenvolver um documento HTML é necessário que ele 
+    seja semântico, ou, no caso, que o documento faça sentido.
+    Vale ressaltar a importância dessa "clareza" de documento. Antes
+    da chegada do HTML5, o qual trouxe diversas tags novas para ajudar
+    na leitura e coesão como <header>, <footer>, <main>, etc; as
+    páginas eram estruturadas a partir da união de "div's" e classes
+    css. Esse formato de estruturação, apesar de útil, permitia aos
+    desenvolvedores um formato "free style" ao nomear as classes, 
+    fazendo com que os códigos não fossem uniformes e dificultando
+    a leitura (tanto por humanos quando por máquinas) e manutenção.
+
+- Acessibilidade:
+    Assim como é falado em ambientes físicos sobre a necessidade de 
+    medidas de "inclusão" e "equalidade" para ofertas de serviços 
+    (como rampas e textos em braile), é necessário de atentar a boas
+    práticas de acessibilidade no ambiente web, também.
+    Desenvolver uma página web acessível para todos é essencial para
+    desenvolvedores e empresas os quais anseiam por alta qualidade 
+    de entrega e experiência de usuário, cativando todos os tipos de 
+    pessoas e grupos sociais.
+    Um dos principais recursos de acessibilidade utilizados para maior
+    entendimento é a árvore de acessbilidade do DOM (Document Object
+    Model), "produto final" do desenvolvimento web completamente 
+    renderizado pelo navegador. Ao renderizar um DOM, uma árvore de 
+    acessibilidade também é criada separando o conteúdo em níveis,
+    possibilitando a leitura correta (por parte de um software de 
+    acessbilidade como o leitor de telas) da página.
+    Ainda sobre a árvore de acessbilidade, apesar de ser criada 
+    automaticamente, é possível manipular manualmente o  seu 
+    comportamento através do ARIA, que são atributos integrados ao
+    HTML para definir a forma de leitura.
+
+- WebScraping:
+    Também chamados como "Crawler", os rastreadores são, genericamente,
+    definidos como programas de definição, exame e indexação automática
+    seguindo links entre páginas web. Em outras palavras, os crawlers, 
+    como o GoogleBot, fazem a busca de dados em páginas da web e armazenam
+    em seu banco de dados para que seja possível realizar buscas
+    posteriormente. E para que essas buscas sejam feitas com maior 
+    eficiência é necessário as páginas estejam bem organizadas, retomando
+    o primeiro tópico e reforçando a importância da semântica no HTML.
+    Webscraping, por sua vez, parte do mesmo princípio de busca e indexação,
+    porém, com um objetivo final, podendo, por exemplo, fazer a criação
+    de uma página de comparação de preços de consoles. O webscraping 
+    realiza a busca na web pelo preço mais baixo, grava a informação
+    no banco de dados e mostra a informação em seu site.
+    obs: A prática de webscraping pode ajudar em várias tarefas e até
+    melhorar uma página própria, porém, deve-se ter consciência e ética
+    ao fazê-lo.
+
+- Tags estruturais:
+    Tags estruturais possuem papel fundamental para o desenvolvimento
+    web, primeiro, por questões de organização e manutenção do código
+    e segundo (mas não menos importante), acessbilidade. 
+    Tags como <main>, <header>, <footer> são bem autodescritivas, elas
+    cuidam do conteúdo principal dá página, cabeçalho (normalmente com
+    um menu de navegação) e rodapé (contendo informações adicionais e 
+    referências bibliográficas), respectivamente. Porém, vale observar 
+    que a tag <main> é única em um documento e não pode ser "filha" de 
+    <header> ou <footer>, por exemplo.
+    Tags "secundárias" como <section> ou <nav> também possuém vital 
+    importância estrutural. A <section>, por exemplo, realiza a separação
+    de assuntos/conteúdos do conteúdo principal, enquanto a <nav> indica
+    que ali, naquele trecho, será criado um menu com links para navegar
+    pela página.

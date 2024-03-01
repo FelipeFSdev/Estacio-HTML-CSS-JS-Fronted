@@ -1,0 +1,71 @@
+- Linguagem de programação: 
+    O javascript, comumente chamado de JS, completa o que
+    pode ser chamado de "triplice aliança do frontend". A
+    linguagem originalmente criada para aplicações web, é
+    responsável pelo comportamento e interatividade entre
+    demais páginas.
+    Atualmente possui suporte para desenvolvimento server
+    side com o pacote "nodejs", trata-se de uma linguagem
+    multiparadigma e diferentes frameworks possibilitando
+    o desenvolvimento mobile também.
+
+- Interface DOM:
+    Abreviação de Modelo de Objeto de Documento, trata-se
+    de uma interface para manipulação de documentos HTML.
+    Essa estrutura de árvores permite o acesso de objetos
+    com propriedades, métodos e eventos a fim de recuperar
+    conteúdo textual e até alterar o seu valor se preciso.
+    Uma observação importante a se fazer é que a árvore
+    DOM não faz parte de nenhuma linguagem de programação
+    específica, podendo ser manipulada por diferentes PL.
+
+- Incoporando a linguagem ao HTML:
+    Para iniciar o desenvolvimento com javascript, deve-se
+    primeiramente fazer a instalação de editories de texto
+    como o VSCODE, notepad++, etc.
+    Feito isto e com arquivo HTML gerado, basta adicionar, 
+    dentro da tag <script> na seção <head> os códigos que 
+    serão usados. Pode-se também dar preferência a arquivos
+    externos ".js" (também no <head> da página).
+    Obs: Para melhor desempenho na renderização de páginas
+    recomenda-se a moção do código javascript para o final
+    da página, após fechamento do <body>.
+
+- Sintaxe javascript:
+    Javascript é uma linguagem fracamente tipada, ou seja,
+    não possui necessidade de especificação de tipos de 
+    dados para suas váriaveis, o que pode ser um problema
+    para algumas pessoas e/ou uma qualidade para outras.
+    A declaração de váriaveis, então, torna-se bem simples
+    com a uso das palavras reservadas "var"(que por sua 
+    vez não é mais tão utilizada por apresentar problemas
+    em sua "interpretação" ao renderizar páginas), "let"
+    (para váriaveis que possam ter valor alterado) e "const"
+    (para váriaveis que não terão alteração no seu valor
+    original); seguidas apenas de seu nome e da atribuição
+    (opcional) de seu valor.
+    Ex:
+        var variavel1 = true;
+        let variavel2 = 123;
+        const variavel3 = "quatro";
+        let varNaoIniciada;
+    obs: Javascript possui suporte para utilização de 
+    aspas simples ou duplas para dados do tipo "string",
+    e possui o uso de ponto e vírgula opcional, porém, 
+    recomendado para melhor visualização do final de um
+    escopo.
+
+- Métodos para páginas web:
+    alert(): Exibe uma caixa de mensagem no navegador
+    O método recebe como parâmetro a mensagem a ser
+    exibida;
+    prompt(): Exibe uma caixa para entrada entrada de 
+    dados com a mensagem passada como parâmetro.
+    document.getElementById(): Referencia um elemento
+    da árvore DOM a partir do seu ID.
+    function: Indica criação de uma função (bloco de 
+    código que executa diferentes ações para uma
+    resposta);
+    return: Indica o encerramento de uma função após
+    todas as ações serem concluídas. O return é pode
+    ser associada a resposta da função.
