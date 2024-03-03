@@ -1,0 +1,68 @@
+- Vetores em javascript:
+    Na aula anterior foram apresentados alguns conceitos
+    para declaração de váriavel, alteração de fluxo de 
+    código através de condicionais e estruturas de repetição,
+    tudo isso é algo visível e prático para o progamador
+    em seu ambiente de desenvolvimento, mas em niveis mais
+    baixos, em nível de computador, o que acontece?
+    Ao declarar o computador reserva/separa um espaço na
+    memória para armazenar o valor de variáveis, funções,
+    etc; esses espaço varia de acordo com o tamanho da
+    variável, que por sua vez, depende do tipo de dado o
+    qual está sendo inserido, uma variável do tipo char(
+    sintrings/textos) possui tamanho de 1 Byte de memória, 
+    enquanto uma variável de tipo float(números reais)
+    possui tamanho igual a 4 Bytes (ou 32 bits).
+    Para a economia destes bytes foi desenvolvido um tipo
+    de váriavel diferentes dos comuns anteriormente vistos,
+    os vetores (ou arrays). Estes ocupam apenas um espaço
+    na memória, podendo armazenar diferentes valores de 
+    um mesmo tipo, facilitando o desenvolvimento de programas
+    que precisam de 50 valores do tipo int, por exemplo,
+    sem que seja necessário a criação de 50 variáveis 
+    diferentes.
+    Ex:
+        const a=1, b=2, c=3, d=4, e=5
+        const array = [1,2,3,4,5,...,n]
+    Repara-se que a estrutura do array é bem simples, 
+    valores, separados por vírgulas, envoltos por colchetes
+    e acessados atravésde índices (sempre iniciado em 0).
+    Ou seja, se fosse preciso acessar a o valor "5" no 
+    array acima, seria necessário acessar o índice 4,
+    desta forma:
+        alert(array[4])
+    Rerferenciando o array e contando a partir de 0 até
+    chegar ao valor pedido.
+    obs: Em javascript é possível armazenar mais de um 
+    tipo dentro de um array, porém, não é recomendado e 
+    é considerado uma má prática de desenvolvimento, pois
+    atrapalha a leitura e entendimento do código.
+
+- Métodos de array:
+    Sabendo a função prática e o conceito dos arrays, é
+    hora de entender como funciona a manipulação dessas
+    variáveis. Ainda no módulo sobre váriaveis, foi visto
+    formas de atribuir e alterar valores a variáveis, com
+    arrays a atribuição funciona de maneira diferente.
+    É possível, através de funções (métodos) fazer alterações
+    em arrays, adicionado valores no início da lista,
+    removendo valores do final, alterando valores do meio,
+    etc.
+    Com métodos de array é possível, também, fazer buscas
+    de algum elemento específico, verificações, ou até
+    transformar em string.
+    Ex:
+        • array.push("valor") - Para adicionar valores ao final do array;
+        • array.shift() - Para remover valores no início do array;
+        • array.join() - Para transformar array em string (cada elemento do array é separado por vírgula);
+        • array.splice("indiceNovoValor","qtdValoresRetirados", "novoValor") - Define a posição onde um novo ;
+        valor será inserido, quantas valores devem ser retirados (a partir do índice informado), e valor a ser 
+        adicionado;
+        • array.slice() - Para copiar um array apenas com valores passados dentro dos parênteses;
+        • array.length - Para saber o tamanho de um array;
+        • array.find(()=>{valor === valorFinal}) - Para encontrar valores que atendam a uma condição.
+    obs: Dentre vasta lista de métodos possíveis (recomendado
+    visualização no site da MDN), existem funções, como .find(),
+    que recebem outras funções como parâmetro/argumento. Essas
+    são conhecidas como funções callbacks, pois são funções que
+    chamam outras funções.

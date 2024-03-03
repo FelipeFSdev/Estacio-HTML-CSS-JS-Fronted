@@ -69,3 +69,150 @@
     return: Indica o encerramento de uma função após
     todas as ações serem concluídas. O return é pode
     ser associada a resposta da função.
+
+- Estruturas de decisão:
+    Também conhecidas como condicionais são "perguntas"
+    feitas ao código a fim de ditar e/ou alterar o 
+    fluxo do código através de operações lógicas de 
+    resultado booleano, ou seja, apenas dois valores
+    possíveis (verdadeiro ou falso).
+    Assim como a maioria das linguagens, o javascript
+    segue o padrão de escrita inglês, ou seja, toda a
+    sua sintaxe possui palavras reservadas no padrão
+    US.
+    É possível realizar a construção de uma condicional,
+    usando as palavras reservadas, if/else, que significam
+    se/senão. A declaração da estrutura se faz inciando com
+    a palavra reservada if, seguida  de parênteses, os
+    quais receberão a operação lógica a ser testada pelo 
+    programa; e por fim, o escopo da estrutura definida 
+    por chaves{}.
+    Ex:
+        const a=2, b=3
+        if(a>b){
+            alert("A maior que B");
+        } else if (a<b){
+            alert("A menor que B");
+        } else{
+            alert("A igual a B);
+        };
+    Traduzindo o código para português, tem-se que 
+    o programa irá mostrar uma caixa de diálogo no 
+    navegador dizendo que a váriavel "a" é menor,
+    maior ou igual a variável "b" a partir da sua
+    verificação. Se "a > b" for verdadeiro, alerta
+    de "A maior que B", e assim por diante.
+    As estrutura podem seguir diferentes modelos
+    sendo apenas o if() simples (sem else), if() com
+    else ou else if(). É possível também realizar 
+    mais de uma verificação dentro de um parâmetro if
+    usando os operadores &&, ||, !.
+    Ex:
+        const a=2, b=3, c=2
+        if(a !== b && a === c){
+            alert("A é diferente de B e igual a C");
+        } else if(b > a || b > c){
+            alert("B é maior que A ou maior que C");
+        };
+    Outra estrutura de decisão possível de ser feita 
+    em javascript é a estrutura switch/case. Essa em
+    questão possui um trabalho similar ao else if, 
+    porém, de forma mais legível. A estrutura é iniciada
+    com o switch(), seguido do seu parâmetro, e depois 
+    é definido quais as possíveis instruções para 
+    determinados valores, caso a váriavel do parâmetro 
+    for igual a 1, retorne "variavel igual a 1" e assim
+    por diante. É importante lembrar que o switch/case
+    sempre será chamado para fazer as verificações uma
+    após a outra, sendo necessário o uso do "break",
+    para interromper sua execução.
+    Ex:
+        const variavel =prompt("digite um valor");
+        switch(variavel){
+            case < 0: 
+            alert("variavel menor que 0");
+            break;
+            case > 0:
+            alert("variavel maior que 0");
+            break;
+            default:
+            alert("Nenhum case cumprido");
+            break;
+        };
+    Nota-se no exemplo acima o uso de um novo método,
+    "default". O default, dentro do switch/case, nada
+    mais é que o "else" do if/else, ou seja, se nenhuma
+    das condições forem verdadeiras o comportamento 
+    padrão do sistema será realizar aquela instrução,
+    no caso, "alert('nenhum case cumprido')".
+
+- Estruturas de repetição:
+    Assim como as condicionais, loops do java script
+    parecem bem familiares para pessoas que já possuem
+    conhecimento em outras linguagens.
+    Dentre os diferentes tipos de laços de repetição,
+    o mais tradicional é o "for de C", no qual é 
+    declarado uma váriavel contadora, uma condição a 
+    ser seguida, e uma ação a ser feita até que a 
+    condição seja cumprida.
+    Ex:
+        for(const i = 0; i < 10; i++){
+            alert(i)
+        }
+    Enquanto i, a variável contadora, for menor que 
+    10, ela será incrementada com +1 e o navegador 
+    irá emitir uma caixa de diálogo com o número da 
+    variável em questão.
+    Outras opções do uso do "for" é o for/in e for/of,
+    estes são comumente utilizados ao fazer "varrimento"
+    em "listas", também conhecidos como arrays.
+    Ex:
+        const array = [1,2,3,4,5]
+        for(const i of array){
+            alert(i)
+        };
+        for(const i in array){
+            alert(i)
+        };
+    Apesar da sua sintaxe praticamente idêntica, os
+    dois exemplos acima possuem retornos diferentes.
+    O for/of traz de forma literal como resposta o
+    elemento do array, ou seja, será mostrado os numeros
+    de 1 a 5. O for/in, por sua vez, trabalha trazendo
+    apenas o índice de cada elemento, retornando por
+    exemplo do 0 ao 4; é também utilizado para "iterar"
+    sobre objetos enumerados, trazendo o nome de suas
+    propriedades/atributos.
+    Ex:
+        const obj1 = {
+            a:1,
+            b:2,
+            c:3,
+        }
+        for(const i in obj1){
+            alert(i)
+        };
+    A resposta será: a, b, c.
+    Visto sobre os diferentes tipos de "for", tem-se
+    também os laços while e do/while.
+    O while recebe uma váriavel contadora a qual será
+    verificada a condição lógica, enquanto o resultado
+    for "false", executa uma ação. O do/while possui
+    um processo semelhante, dessa vez, porém, executando
+    uma ação primeiro e depois fazendo a verificação.
+    Ex:
+        let contador = 0;
+        while(contador < 10){
+            alert(contador);
+            contador++;
+        }
+        contador = 0;
+        do{
+            contador++;
+            alert(contador)
+        } while(contador<10)
+    Nos casos acima, o while terá seu contador incrementado
+    até chegar em 9 e será encerrado o laço. No do/while,
+    o contador segue sendo incrementado até atingir o valor
+    10, pois sua verificação só será testada após a soma do
+    valor.

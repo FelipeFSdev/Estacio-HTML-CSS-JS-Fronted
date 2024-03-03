@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Incorporando Javascript em Páginas HTML</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="multiplicacao"> Resultado da multiplicação: </div>
+    <div id="divisao"> Resultado da divisão: </div>
+</body>
+
+<script type="text/javascript">
+    var variavel;
+    variavel = prompt("Insira um número");
+    let variavel2 = prompt("Insira um número");
+    const operador = prompt("Escolha uma operacao entre: '+','-','/','*'");
+
+    // var resultadoMultiplicacao = multiplique(variavel, variavel2);
+    // const resultadoDivisao = divisao(variavel, variavel2);
+
+    // var divLocal = document.getElementById('multiplicacao');
+    // var h1Local = document.getElementById("divisao");
+
+    // divLocal.innerHTML += resultadoMultiplicacao;
+    // h1Local.innerHTML += resultadoDivisao;
+
+    operacao(operador, variavel, variavel2);
+
+    function multiplique(numero1, numero2) {
+        var resultado = 0;
+        resultado = alert(numero1 * numero2);
+
+        return resultado;
+
+    };
+    function divisao(num1, num2) {
+        const resultado = alert(num1 / num2);
+        return resultado;
+    };
+    function soma(num1, num2) {
+        const resultado = alert(Number(num1) + Number(num2));
+        return resultado;
+    };
+    function subtracao(num1, num2) {
+        const resultado = alert(Number(num1) - Number(num2));
+        return resultado;
+    };
+    function operacao(operacao, num1, num2) {
+        if (operacao === "/") {
+            divisao(num1, num2);
+        };
+        if (operacao === "*") {
+            multiplique(num1, num2);
+        };
+        if (operacao === "+") {
+            soma(num1, num2);
+        };
+        if (operacao === "-") {
+            subtracao(num1, num2);
+        }
+    };
+</script>
+
+</html>

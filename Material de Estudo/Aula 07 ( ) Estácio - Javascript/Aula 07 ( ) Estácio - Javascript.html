@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const primeiroNumero = prompt("Informe um numero positivo");
+        const segundoNumero = prompt("Informe um segundo numero positivo");
+
+        dividir(primeiroNumero, segundoNumero);
+        function dividir(num1, num2) {
+            const array = [];
+            if (num1 < 0 || num2 < 0) {
+                return alert("Insira apenas númeos positivos");
+            }
+            array.push(num1, num2);
+            for (const i = 0; i < array.length; i++) {
+                const resultado = array[i] / array[i + 1];
+                return alert(resultado.toFixed(2));
+            }
+        }
+    </script>
+</body>
+
+</html>
