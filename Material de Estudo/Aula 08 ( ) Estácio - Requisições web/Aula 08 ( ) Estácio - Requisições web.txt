@@ -1,0 +1,130 @@
+- Requisições e assincronicidade:
+    Se você já é familiarizado com programação backend
+    ou ao menos já participou do desenvolvimento de uma
+    API, sabe que APIs funcionam com requisições e
+    respostas; além disso, provavelmente sabe o que é 
+    uma função assíncrona e como funciona. Isso deve 
+    servir como ponta pé inicial para entender como tudo
+    isso funciona do lado do cliente (frontend).
+    Em códigos procedurais têm-se a leitura, feita pelo
+    interpretador e/ou compilador, do código escrito
+    linha a linha, de forma sequencial (síncrona), 
+    sempre executando a linha anterior antes de executar
+    a próxima, ao usar uma abordagem assíncrona para 
+    desenvolver um programa, esse código passa a ser 
+    lido de forma tal qual seja possível o "agendamento" 
+    para  execução de linhas no início do código, apenas
+    após todo o programa ser executado, por exemplo.
+    Esta abordagem permite o recebimento de grande fluxo
+    de requisições ao mesmo tempo sem necessariamente
+    retornar uma resposta para o usuário antes de receber
+    uma próxima requisição.
+    Ao desenvolver um sistema, um conjunto de rotinas e 
+    procedimentos computacionais definidos por software
+    (APIs) indicam a comunicação entre diferentes tipos
+    de interfaces e sistemas (e como deve ser feita), a 
+    fim de tornar tudo mais fluído, funcional e livre de 
+    bugs, por exemplo. Essas APIs trabalham recebendo e 
+    retornando informações no lado "server side", essas 
+    informações que são solicitadas e/ou recebidas, são 
+    chamadas requisições (ou requisições e respostas).
+    Requisições síncronas, quando realizadas bloqueiam 
+    o fluxo de informações, impedindo que o servidor 
+    receba novas solicitações sem antes responder uma 
+    anterior, ou seja, apenas uma solicitação por vez.
+
+- AJAX (Assynchronous Javascript And Xml):
+    Este termo foi criado a fim de englobar as diferentes
+    tecnologias mais utilizadas no desenvolvimento web:
+    HTML; CSS; Javascript; DOM; XML; JSON; XMLHttpRequest.
+    O XMLHttpRequest trata-se de um objeto com métodos e
+    propriedades específicas para o uso de diferentes 
+    métodos HTTP (GET, PUT, DELETE, PATCH, POST), que por
+    sua vez, possuem função de recuperar, enviar, deletar,
+    ou atualizar informações através de requisições.
+    Essas requisições HTTP são enviadas ao servidor,
+    tratadas e devolvidas em formado XML, ou JSON, este
+    último sendo o mais comum/popular atualmente.
+
+- XMLHttpRequest:
+    O XMLHttpRequest é um objeto com atributos e métodos
+    pré-definidos por uma classe (conceito de POO), logo
+    para sua utilização é necessário criar uma instância
+    desde objeto dentro de uma variável.
+    Ex:
+        const varXmlHttpReq = new XMLHttpRequest();
+    Desta forma, é possível acessar os métodos do objeto
+    referenciando a váriavel, seguido do ponto ".", e o
+    nome do método (ou atributo) desejado.
+    Ex:
+        varXmlHttpReq.open(arg1,arg2,arg3);
+    O método acima permite a inicialização (ou reinicio)
+    de uma requisição para API. No primeiro argumento é 
+    passado o método HTTP, depois o endereço de acesso do
+    servidor que irá acessar e, por fim, um parâmetro 
+    opcional do tipo booleano, que indica se a requisição
+    será feita de forma síncrona (False) ou assíncrona (True),
+    assumindo o valor padrão de "true" caso não seja passado.
+    Outro método xml interessante é o método onReadyStateChange.
+    Este possui a função de realizar alguma ação sempre que 
+    o estado da propriedade "readyState" da requisição sofrer
+    alterações.
+    Após a conclusão da requisição, um código é armazenado
+    na propriedade "status" do objeto xml. Este status nem 
+    sempre é retornado para o usuário, porém em ferramentas
+    de testes de API como Insomnia ou Postman, por exemplo,
+    é possível fazer o monitoramento para identificar algum
+    possível erro. Em paralelo a isso, é retornado para o 
+    usuário a resposta da requisição, podendo ser no formato
+    de texto, XML ou JSON. Sendo necessário os métodos 
+    ".responseText", ".responseXML", ".parse", respectivamente.
+    E por fim, o método ".send", para de fato enviar a resposta
+    ao usuário.
+    obs: O XMLHttpRequest é uma API já "pré-formatada", com 
+    seus métodos e atributos próprios, não sendo possível 
+    fazer alterações próprias em seus elementos. APIs são
+    desenvolvidas por programadores backend, o que foge do 
+    conteúdo desta aula, porém é importante ter ciência de 
+    que é possível realizar o desenvolvimento de APIs próprias.
+
+- API Fetch:
+    Conceitualmente parecida com o XMLHttpRequest, esta API
+    possibilita a realização de requisições assíncronas para 
+    melhor funcionamento de uma página web.
+    Por ser uma tecnologia mais recente, porém, a interface
+    desta API permite a listagem de algumas vantagens como: 
+        • Uso de Promises
+        • Possiblitadade de uso com outras tecnologias.
+    Promises são objetos cujos valores permancem indefinidos
+    até o final do processamento de uma requisição assíncrona.
+    Diferente de métodos síncronos, ao identificar uma Promise,
+    o método é colocado em segundo plano para que seu valor 
+    seja retornado em determinado momento posterior, assumindo
+    os estados "pending", "fulfilled" ou "rejected"; representando
+    uma promise pendente, concluída e com valor "válido" ou 
+    falha na operação, respectivamente.
+    obs: fulfilled ou rejected são consideradas soluções para 
+    promise, podendo considerar uma promise como não resolvida 
+    apenas promises pendentes. Para tratamento de promises não
+    aceitas, ou rejeitas, sem que haja uma "quebra" na aplicação
+    é utilizado o conceito de tratamento de exceções, com bloco
+    de try/then/catch. De forma didática, este bloco irá, ao 
+    identificar uma promise, "tentar" executar - neste momento
+    a promise começará a ser processada, seguir o código, "então"
+    retornar a resposta da promise - quando esta for concluída
+    com sucesso, e caso a promise seja rejeitada o erro é "pego"
+    e retornado tanto para o servidor quanto para o usuário - 
+    o erro, antes de retornar ao usuário, deve ser tratado para 
+    que seja compreensível facilmente pelo usuário.
+
+- JSON:
+    Abreviação para "JavaScript Object Notation", trata-se 
+    de um tipo não primitivo, ou formatação, para troca de 
+    dados. 
+    Destaca-se pela simplicidade de interpretação, tanto por
+    máquinas quanto por pessoas.
+    Embora a associação nominal ao JavaScript, este é um 
+    formato de texto capaz de ser utilizado por outras linguagens.
+    Os objetos JSON possuem uma particularidade, todos seus 
+    atributos e valores são envoltos por aspas duplas, exceto
+    em valores do tipo numérico.
