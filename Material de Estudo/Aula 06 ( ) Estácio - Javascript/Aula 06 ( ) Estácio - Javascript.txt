@@ -34,14 +34,14 @@
 - Sintaxe javascript:
     Javascript é uma linguagem fracamente tipada, ou seja,
     não possui necessidade de especificação de tipos de 
-    dados para suas váriaveis, o que pode ser um problema
+    dados para suas variáveis, o que pode ser um problema
     para algumas pessoas e/ou uma qualidade para outras.
-    A declaração de váriaveis, então, torna-se bem simples
+    A declaração de variáveis, então, torna-se bem simples
     com a uso das palavras reservadas "var"(que por sua 
     vez não é mais tão utilizada por apresentar problemas
     em sua "interpretação" ao renderizar páginas), "let"
-    (para váriaveis que possam ter valor alterado) e "const"
-    (para váriaveis que não terão alteração no seu valor
+    (para variáveis que possam ter valor alterado) e "const"
+    (para variáveis que não terão alteração no seu valor
     original); seguidas apenas de seu nome e da atribuição
     (opcional) de seu valor.
     Ex:
@@ -69,6 +69,85 @@
     return: Indica o encerramento de uma função após
     todas as ações serem concluídas. O return é pode
     ser associada a resposta da função.
+
+- Funções: 
+    Pode ser definido como blocos de código que executam
+    determinada tarefa.
+    Blocos de código, como o nome indica, possuem várias
+    linhas de código, com métodos, váriaveis locais, 
+    operações e retornos a fim de exercer uma função
+    específica quando for "chamada".
+    Essa ferramenta é especialmente importante para evitar
+    a escrita de códigos repetidos, facilitando assim, a 
+    manutenção e aumentando a produtividade.
+    Ao criar funções é importante entender conceitos de 
+    escopo. Variáveis criadas dentro de uma função possuem
+    escopo local, ou seja, não podem ser acessadas por 
+    outras partes do código que estejam fora da função;
+    por outro lado, funções podem acessar variáveis
+    declaradas no escopo geral do projeto, estas são 
+    caracterizadas como "globais".
+    Sua sintaxe possui particularidades a depender do 
+    contexto em que está sendo usada. Ao trabalhar com 
+    javascript para desenvolvimento do lado servidor,
+    com nodejs, é possível identificar funções no padrão
+    "arrow function". No desenvolvimento web, porém, o 
+    mais comum é utilizar a declaração "padrão", com a
+    palavra reservada, seguida do nome da função e seus
+    parênteses, abrindo escopo da função com chaves.
+    Ex:
+        **arrow function
+            const nomeDaFuncao = ()=>{
+                //todo código abaixo
+            };
+        **declaração padrão
+            function nomeDaFuncao(){
+                //todo código abaixo
+            };
+    Outro aspecto importante para ressaltar são os 
+    parâmetros. Também chamados de argumentos, eles
+    assumem o papel de indicar que uma função receberá
+    um valor para que sua execução seja possível. 
+    Ex:
+        function nomeDaFuncao(arg1, arg2){
+            return arg1 + arg2;
+        };
+    Dessa forma, ao "chamar" a função, esta retornará
+    o resultado da soma dos valores passados dentro
+    dos parênteses.
+    Ex:
+        nomeDaFuncao(49,51)
+        **retorno: 100
+        nomeDaFuncao("Bom", "dia")
+        **retorno: Bomdia
+- Objetos:
+    Assim como em outras linguagens de programação, os objetos
+    em javascript podem ser interpretados como traduções do
+    mundo real para o contexto de software. Isto quer dizer 
+    que, assim como no mundo real, objetos possuem formatos
+    específicos e com diferentes características. Por exemplo,
+    quando fala-se sobre celulares é importante entender quais
+    funções e propriedades físicas de um celular, como cor, 
+    marca, tamanho, quantidade de botões, função para ligar, 
+    tirar foto e enviar mensagens. Traduzindo para objetos
+    tem-se:
+        celular:{
+            cor:
+            marca:
+            tamanho:
+            qtdBotões:
+            powerOnOff()
+            tirarFoto()
+            enviarMensagens()
+        }
+    Desta forma, é possível atribuir uma série de características
+    referentes a uma váriavel, utilizando apenas um endereço
+    de memória (reduzindo o "custo" de hardware).
+    Nota-se também a diferença entre propriedades (ou atributos)
+    comuns e métodos.
+    obs: o acesso a essas propriedades é feita a partir da
+    referência ao objeto com seu nome seguido do ponto e 
+    nome da propriedade desejada (Ex: celular.cor).
 
 - Estruturas de decisão:
     Também conhecidas como condicionais são "perguntas"
@@ -98,7 +177,7 @@
         };
     Traduzindo o código para português, tem-se que 
     o programa irá mostrar uma caixa de diálogo no 
-    navegador dizendo que a váriavel "a" é menor,
+    navegador dizendo que a variável "a" é menor,
     maior ou igual a variável "b" a partir da sua
     verificação. Se "a > b" for verdadeiro, alerta
     de "A maior que B", e assim por diante.
@@ -120,7 +199,7 @@
     porém, de forma mais legível. A estrutura é iniciada
     com o switch(), seguido do seu parâmetro, e depois 
     é definido quais as possíveis instruções para 
-    determinados valores, caso a váriavel do parâmetro 
+    determinados valores, caso a variável do parâmetro 
     for igual a 1, retorne "variavel igual a 1" e assim
     por diante. É importante lembrar que o switch/case
     sempre será chamado para fazer as verificações uma
@@ -152,7 +231,7 @@
     conhecimento em outras linguagens.
     Dentre os diferentes tipos de laços de repetição,
     o mais tradicional é o "for de C", no qual é 
-    declarado uma váriavel contadora, uma condição a 
+    declarado uma variável contadora, uma condição a 
     ser seguida, e uma ação a ser feita até que a 
     condição seja cumprida.
     Ex:
@@ -195,7 +274,7 @@
     A resposta será: a, b, c.
     Visto sobre os diferentes tipos de "for", tem-se
     também os laços while e do/while.
-    O while recebe uma váriavel contadora a qual será
+    O while recebe uma variável contadora a qual será
     verificada a condição lógica, enquanto o resultado
     for "false", executa uma ação. O do/while possui
     um processo semelhante, dessa vez, porém, executando
