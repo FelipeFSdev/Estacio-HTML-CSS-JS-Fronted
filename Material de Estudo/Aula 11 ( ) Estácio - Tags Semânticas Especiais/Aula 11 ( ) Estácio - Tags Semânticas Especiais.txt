@@ -1,0 +1,153 @@
+- Tags para seccionar a página:
+    • <section></section> - Para criar seções específicas em 
+    uma página web, diferentemente da <div></div>, que cria
+    seções genéricas; para auxiliar mecanismos de busca. 
+    • <aside></aside> - Para criar seções que não se referem
+    específicamente ao assunto principal da página mas que 
+    podem se relacionar. São comumente utilizadas em barras 
+    laterais.
+    • <nav></nav> - Para criar seções destinadas a criação 
+    de barras de navegação dentro de uma página, porém,
+    que aponta para outras páginas através de links de 
+    navegação. São comumente utilizadas em seções de rodapé
+    ou cabeçalho.
+    obs:
+    Uma observação importante a se fazer é que: todas elas
+    são utilizadas, por padrão, dentro da tag <main></main>,
+    indicando o conteúdo mais importante/principal do corpo 
+    (<body></body>) da página.
+
+- Tags para artigos:
+    • <article></article> - Destinado a artigos diretamente 
+    relacionados ao conteúdo principal da página, semelhante 
+    a <section></section>, porém, permite o aninhamento de 
+    artigos dentro um do outro. 
+    • <time></time> - Tag auxiliar para artigos usadas para 
+    referenciar datas e horários da publicação juntamente 
+    com os atributos "datetime"/"pubdate". São usadas dentro
+    de tags de parágrafo e/ou título.
+    • <blockquote></blockquote> - Utilizado para indicar uma
+    citação de múltiplas linhas, como o trecho de um livro.
+    O uso desta tag realiza de forma automática o alinhamento
+    do conteúdo. Como atributo auxiliar, têm-se o "cite=''".
+    Este é responsável por indicar a fonte da citação, caso 
+    esta não tenha sido feita no próprio site.
+    • <q></q> - Semelhante ao <blockquote></blockquote>, é 
+    também uma citação, porém, uma citação curta e com poucas
+    linhas. O uso desta tag faz a justificação do conteúdo e 
+    adiciona aspas duplas automaticamente. Também pode ser 
+    utilizado o atributo "cite=''".
+    obs: 
+    Semânticamente o uso dessas tags indicam aos mecanismos 
+    de busca e/ou acessibilidade que seus respectivos 
+    conteúdos são relacionados uns aos outros.
+
+- Tags para imagens:
+    • <figure></figure> - Delimita o escopo de uma imagem.
+    Ou seja, tudo que estiver cercado pela tag figure será
+    relacionado a imagem em questão, como uma imagem e sua 
+    descrição. O uso desta tag realiza a justificação do 
+    conteúdo de forma automática, alinhando a imagem e sua
+    descrição.
+    • <figcaption></figcaption> - Utilizada para descrever
+    uma imagem dentro da tag figure.
+    • <picture></picture> - Permite a utilização de outras
+    fontes de imagem além da principal a depender do tamanho
+    da tela através da tag <source/>. A tag source seleciona 
+    a imagem com auxílio dos atributos srcset="", para indicar
+    a fonte da imagem, e media="", para indicar em qual 
+    momento (a partir de qual tamanho de tela) a imagem 
+    deve aparecer.
+    obs:
+    Todas essas tags estruturais permitem a utilização da 
+    tag <img src=""/> para atribuição da imagem desejada.
+
+- Tags para listagem de opções:
+    • <select></select> - Utilizada em conjunto com a tag 
+    <option></option>, é a forma mais comum para criação
+    de caixas de seleção de opções. É também conhecido por
+    "combo box", por se tratar de uma caixa de texto 
+    combinada com uma lista de opções. A caixa de texto, 
+    porém, não permite escrita, apenas busca por opções 
+    a partir de suas iniciais.
+    • <datalist></datalist> - Também integrante do grupo
+    de "combo boxes", possui um campo de texto e algumas 
+    opções de escolha (utilizando a tag option). A maior
+    diferença para o exemplo anterior está na criação do 
+    campo. O datalist é declarado posteriormente a tag 
+    <input></input>, este tendo atributo type e name com
+    tipo "search". Além dos atributos type e name, mais 
+    um atributo é necessário para referenciar o datalist,
+    o "list". Este atributo recebe como valor o nome da
+    lista de opções que será mostrado, ou seja, o id do 
+    datalist.
+
+- Tags para comandos e códigos: 
+    • <code></code> - Utilizado para identificar trechos 
+    de código fonte.
+    • <kbd></kbd> - Utilizado para identificar comandos
+    de teclado.
+    • <pre></pre> - Utilizado para criar um contêiner de 
+    elementos, justificando automaticamente o conteúdo.
+    obs:
+    As tags acima alteram a fonte de todo o texto contido
+    entre sua abertura e fechamento para uma fonte "mono
+    space".
+
+- Tags para menus de informação:
+    • <details></details> - Cria um elemento expansível
+    ao clicar, mostrando todo o conteúdo dentro das tags.
+    O comportamento padrão desta tag cria um elemento com
+    o título "Saiba mais". Este texto pode ser alterado
+    por intermédio da tag <summary></summary>.
+
+- Tags para progressão de processos:
+    • <meter></meter> - Cria uma barra semelhante a barra
+    de progressão, porém, para valores que podem aumentar
+    ou diminuir, servindo como ferramente para medição. 
+    Comumente utilizado para medição de uso de disco do 
+    computador, no qual sabe-se exatamente os limites 
+    inferiores e superiores.
+    • <progress></progress> - Cria uma barra de progresso
+    para representar o andamento da realização de uma 
+    tarefa. Podem ser usados os atributos max, min e value
+    para definir limites superior, inferior e o quanto o 
+    usuário já progrediu, respectivamente, juntamente com o
+    javascript.
+
+- Tags para marcação de texto:
+    • <mark></mark> - Funciona igualmente a um marca texto.
+    Ao envolver um trecho de um texto, parágrafo, etc, seu
+    conteúdo é destacado por uma caixa amarela. O uso do
+    javascript pode tornar o seu uso mais eficiente.
+
+- Tags para manipulação de animações:
+    • <canvas></canvas> - Comumente utilizado para criação
+    de animações e gráficos, permite reservar um espaço no
+    qual todo o seu conteúdo poderá ser animado. O conteúdo
+    é adicionado a partir de funções javascript.
+    obs:
+    O canvas é uma ferramenta poderosa e, consequentemente, 
+    robusta, tanto em relação as possibilidades para design
+    quanto a seu conteúdo. Para treinar e aprender mais a 
+    respeito dois sites podem ser acessados no navegador: 
+    codepe.io; w3schools.com.
+
+- Atributos que vieram com o HTML5:
+    • autofocus - Atribuído a tags <input></input>, faz com 
+    que a página, ao ser carregada, "ative" automaticamente
+    o campo de texto.
+    • placeholder - Também usado para campos de texto, este
+    atributo cria uma marca d'agua para auxiliar o usuário,
+    dando exemplos do que deve ser inserido naquele campo. 
+    • required - Faz com que o preenchimento de um campo de 
+    texto seja obrigatório para envio de um formulário.
+    • disabled - Desabilita um campo do formulário, impedindo
+    a utilização do usuário para com os campos.
+    • maxlength - Atributo da tag <textarea></textarea> para
+    definir um limite de caracteres que podem ser inseridos
+    no campo.
+    • minlength - Semelhante ao maxlength, define um limite
+    mínimo de caracteres que devem ser inseridos. Diferente 
+    do maxlength, esta tag pode ser usada em outras tags de 
+    texto além do <textarea></textarea>.

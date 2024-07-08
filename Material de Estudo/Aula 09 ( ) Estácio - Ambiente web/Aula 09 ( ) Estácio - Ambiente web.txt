@@ -1,0 +1,106 @@
+- Modelo Cliente x Servidor:
+    Baseado no conceito de separação de dados e recursos de 
+    processamento, este modelo foi desenvolvido a fim de 
+    substituir o modelo centralizado presente nos mainframes
+    (computadores de grande porte para processamento de dados).
+    Servidores são essencialmente máquinas que processam e 
+    provém dados, podendo assumir qualquer forma. Clientes 
+    por sua vez, são máquinas que requisitam e consomem os
+    dados processados.
+    Em uma rede de computadores, por exemplo, estão presentes
+    máquinas servidoras de diferentes tipos de serviços, como
+    armazenamento de dados, envio de emails, etc. Enquanto as
+    máquinas "clientes" assumem a forma de computador pessoal.
+
+- Aplicações:
+    As aplicações cliente x servidor fazem uso de arquitetura
+    distribuída, utilizando o conceito de desenvolvimentos em 
+    camadas. O modelo de camadas pode assumir diferentes formas
+    a depender da quantidade de camadas.
+    O modelo de 2 camadas é a mais básica, se tratando apenas
+    das camadas Cliente e Servidor. A primeira para tratar a 
+    lógica de negócio e interface do usuário e a segunda para 
+    processamento de dados com SGBDs.
+    O modelo posterior, de 3 camadas, foi desenvolvido a fim
+    sanar alguns problemas de reinstalação/atualização da 
+    aplicação a cada eventual mudança de regra ou lógica, 
+    dividindo, agora, em 3 camadas:
+        Dados - Servidor exclusivo para armazenamento de dados
+        Apresentação - Interface com usuário. Acessa apenas o 
+        servidor de aplicação, não mais o de dados.
+        Aplicação - Servidor responsável pelas regras de negócio
+        e controle de acesso ao servidor de dados. 
+    E o modelo final, mais utilizado atualmente, é o de 4 (ou n)
+    camadas. Agora, não existe mais a necessidade de uma máquina
+    cliente, apenas acesso a um navegador web para que seja 
+    possível realizar o acesso a uma aplicação. Deste modo, não 
+    é mais necessário a instalação de aplicações diretamente na 
+    máquina, pois as mesmas são instaladas em um servidor web, 
+    e dividindo as camadas em:
+        Servidor web;
+        Servidor de aplicação;
+        Servidor de dados;
+        Cliente.
+
+- Comunicação:
+    Ao falar de comunicação, refere-se a forma na qual os dados
+    trafegam entre uma requisição, feita pelo cliente, e uma 
+    resposta do servidor.
+    Essa comunicação é feita através do protocolo HTTP, sigla para
+    HyperText Transfer Protocol, por meio de uma rede de internet.
+    Caracterizada por requests e responses, a comunicação web é 
+    comumente iniciada do lado cliente, através do método GET, 
+    porém, também é possível que o processamento das respostas para 
+    determinadas requisições sejam iniciadas pelo servidor, como 
+    em serviços "PUSH". Um exemplo de serviço PUSH é o disparo de 
+    notificações para clientes.
+
+- Interface do cliente:
+    Inicialmente realizada por linhas de comando, a interface do 
+    cliente é o intermediário de comunicação entre o ser humano
+    e o computador. Com o avanço e evolução da tecnologia essa 
+    interação passou a ser feita através de interfaces gráficas
+    também chamadas de GUI.
+    Estudos a cerca da interação entre máquina x ser humano são 
+    voltados a garantir usabilidade e melhor experiência para o 
+    usuário. Além disso, com o aumento na utilização de dispositivos
+    móveis, acima de tudo, smartphones, têm-se feito necessário 
+    cada vez mais o desenvolvimento de telas/interfaces responsivas,
+    adaptáveis a qualquer tamanho de tela.
+    Ainda sobre responsividade, o conceito se baseia na adaptação
+    para que ao desenvolver uma página não seja necessário a criação
+    de diferentes interfaces, com diferentes tamanhos, gerando um 
+    trabalho (e retrabalho) e custo bem maior para o projeto.
+    Para o desenvolvimento de layouts responsivos, utiliza-se 
+    unidades flexíveis para definição de dimensões dos elementos,
+    como o percentual, EM ou REM. EM faz referência ao elemento 
+    pai a que está associado, enquanto REM referencia a raiz do 
+    documento, no caso, a tag <body>.
+    Um exemplo oposto a unidades flexíveis de dimensões são os 
+    "pixels". Ao definir a altura e largura de um elemento com 
+    pixels, o elemento possuirá sempre aquele tamanho, o que 
+    acabada ocasionando em elementos "fugindo", ou  espaço não
+    preenchido na tela. 
+
+- Media Query:
+    Utilização de tipos de mídia para definir formatações de 
+    acordo com o dispositivo.
+    Esses tipos agem diretamente sobre o CSS, criando condições
+    para que determinado estilo CSS seja aplicado. Por exemplo
+    mostrar o cabeçalho de uma página apenas quando a tela for 
+    maior que 360px.
+
+- Design adaptativo x Design responsivo:
+    Apesar de parecidos (e confundidos), os dois conceitos 
+    possuem definições distintas. O segundo, como falado acima
+    possui um desenvolvimento a partir de técnicas para se 
+    adaptar dinâmicamente ao tamanho da tela. Já o design 
+    adaptativo consiste em identificar o tamanho da tela e 
+    renderizar uma folha de estilo. Esta identificação parte 
+    do conceito de breakpoints definidos manualmente pelo 
+    desenvolvedor.
+    obs:
+        Vale ressaltar que designs responsivos se baseiam na 
+        abordagem mobile first, na qual o foco é o desenvolver 
+        primeiramente o design pensado para telas menores e 
+        progredindo para telas maiores.
