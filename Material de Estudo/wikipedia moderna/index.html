@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Wikipedia - HTML Lessons</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <section class="logo">
+            <figure>
+                <img class="wikipedia-logo"
+                    src="https://pt.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-fr.svg"
+                    alt="Wikipedia" />
+                <img class="wikipedia-logo-sub"
+                    src="https://pt.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-pt.svg"
+                    alt="A enciclopédia livre" />
+            </figure>
+        </section>
+        <nav class="main-nav-bar">
+            <ul>
+                <li> <a href="#"> HTML fundamentals </a> </li>
+                <li> <a href="#"> CSS fundamentals </a> </li>
+                <li> <a href="#"> Tags semânticas </a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="what-html-is">
+            <h1> O que é HTML? </h1>
+            <section class="hypertext-lang">
+                <h2> Linguagem de marcação de hipertexto </h2>
+                <p>
+                    Popularmente conhecida como "html" a linguagem de hypertexto é usada para
+                    estruturação de documentos agrupando textos, vídeos, tabelas, etc.
+                    Utilizando o conceito de hierarquia de elementos, é possível classificar
+                    ou identificar um elemento "pai", "filho" e/ou "irmão", através das tags
+                    de marcação "<>".
+                </p>
+            </section>
+            <section class="doctype-importance">
+                <h2> Importância da declaração de tipo de documento </h2>
+                <p>
+                    Ao longo dos anos, desde a criação do html, foram se criando novas versões
+                    com novas implementações para a linguagem a partir das necessidades de
+                    cada época.
+                    Antes da criação do HTML5, era comum, na criação de páginas, definir o
+                    tipo de documento que estava sendo criado, para que o navegador "soubesse"
+                    quais conjuntos de tags seriam utilizadas e renderizadas.
+                    Apesar de não ser, teoricamente, necessário o uso do <code>"DOCTYPE"</code> para
+                    criação de novas páginas, ainda existem muitas páginas antigas (criadas
+                    antes do HTML5) que não foram "portadas" para a nova versão.
+                </p>
+            </section>
+            <section class="difference-between-html4-html5">
+                <h2>Diferença de instrução DOCTYPE HTML4 -> HTML5 </h2>
+                <p>
+                    O HTML4 previa três tipos de doctype: strict, transitional e frameset.
+                    Strict: Obrigatoriedade de separação entre estrutura e apresentação;
+                    limitação nos elementos de apresentação disponíveis; ausência de
+                    suporte a tags obsoletas.
+                    Transitional: Mais maleável em relação aos atributos de apresentação;
+                    possibilidade de usar tags obsoletas.
+                    Frameset: Tag obsoleta do HTML4 que permitia o agrupamento de vários
+                    frames e exibição em uma única página.
+                    Ainda baseada em uma SGML(Standard Generalized Markup Language), o HTML4
+                    exigia uma declaração extensa de tipo de documento.
+                </p>
+                <p>Ex:</p>
+                <pre>
+                <code>
+                   < !DOCTYPE html PUBLIC “-/W3C/DTD HTML 4.01 Transitional//EM” http://www.w3.org/TR/html4/loose.dtd > 
+                </code>
+            </pre>
+                <p>
+                    É possível identificar:
+                    Tipo de documento: HTML,
+                    Tipo de acesso a DTD: PUBLIC,
+                    Local de hospedagem da DTD: W3C/DTD,
+                    Versão de HTML: HTML 4.01 Transitional,
+                    URL da especificação:
+                    <a href="http://www.w3.org/TR/html4/loose.dtd">
+                        http://www.w3.org/TR/html4/loose.dtd
+                    </a>
+                    A partir da HTML5, quando a linguagem deixou de se basear em SGML, as
+                    declarações passaram a ter uma sintaxe bem resumida.
+                </p>
+                <p>Ex:</p>
+                <pre>
+                <code>
+                    < !DOCTYPE html >
+                </code>
+            </pre>
+            </section>
+            <section class="essencial-elements">
+                <h2> Elementos essenciais para uma página web </h2>
+                <p>
+                    A estrutura essencial de uma página web é constituída por:
+                    <br />
+                    Raiz,
+                    <br />
+                    Cabeçalho,
+                    <br />
+                    Corpo.
+                    <br />
+                    Logo após a definição de tipo do documento, é declarada a tag raiz
+                    <code> html </code> seguida por <code> head </code> e <code> body </code>
+                    respectivamente (sempre
+                    lembrando de fazer seus devidos "fechamentos").
+                </p>
+            </section>
+            <section class="document-root">
+                <h2> Raiz </h2>
+                <p>
+                    Tag inicial após a declaração do
+                    <code><</code><code>!DOCTYPE</code><code>></code>,
+                    <code><</code><code>html</code><code>></code>
+                    <code><</code><code>/html</code><code>></code>.
+                    Dentro da raiz do documento, serão inseridas todas as outras tags e
+                    informações.
+                </p>
+            </section>
+            <section class="documento-header">
+                <h2> Cabeçalho </h2>
+                <p>
+                    Responsável pela manutenção de elementos da página, o cabeçalho mantém
+                    todo o documento em ordem e funcionando, e para isso, existem algumas
+                    tags que são comumente utilizadas dentro do "<code>< head ></code>".
+                    Ex:
+                </p>
+                <pre>
+                    <code>
+                        < title > Para definir o título do documento, mostrado na barra de
+                        navegação
+                    </code>
+                    <code>
+                        < meta > Informações da página como palavras-chave, descrição, tipo
+                    de codificação, etc.
+                    </code>
+                    <code>
+                        < script > Inclusão / definição de scripts(integração com javascript) </script>
+                    </code >
+                    <code>
+                        < link > Normalmente responsável pela inclusão de folhas de estilo (CSS)
+                    externas, e miniaturas para icone na barra de navegação.
+                    </code>
+                    <code>
+                        < style > Responsável pelo vínculo de folhas de estilo (CSS) caso declaradas diretamente no documento
+                    </code>
+                </pre>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
